@@ -3,12 +3,12 @@ import MySelf from "../MySelf/MySelf";
 import Sis from "../Sis/Sis";
 
 
-const Dad = () => {
+const Dad = ({asset}) => {
     return (
         <div>
             <h2>Dad</h2>
             <section className="flex">
-                <MySelf></MySelf>
+                <MySelf asset={asset}></MySelf>
                 <Brothers></Brothers>
                 <Sis></Sis>
             </section>
