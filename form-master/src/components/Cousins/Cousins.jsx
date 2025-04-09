@@ -1,3 +1,4 @@
+import Friend from "../Friend/Friend";
 import Special from "../Special/Special";
 
 
@@ -10,6 +11,9 @@ const Cousins = ({name, asset}) => {
                 { asset && <Special asset={asset}>
 
                 </Special>}
+                {
+                    name==='mu' && <Friend></Friend>
+                }
             </section>
         </div>
     );
