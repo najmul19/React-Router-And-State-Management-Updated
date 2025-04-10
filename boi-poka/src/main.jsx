@@ -10,6 +10,8 @@ import Home from "./componets/Home/Home";
 import DashBoard from "./componets/DashBoard/DashBoard";
 import BookDetail from "./componets/BookDetail/BookDetail";
 import ListedBooks from "./componets/ListedBooks/ListedBooks";
+import { ToastContainer } from 'react-toastify';
+
 const router = createBrowserRouter([
   {
     path: "/",
@@ -43,6 +45,7 @@ createRoot(document.getElementById("root")).render(
   <StrictMode>
 
       <RouterProvider router={router} />
+      <ToastContainer />
 
   </StrictMode>
 );
