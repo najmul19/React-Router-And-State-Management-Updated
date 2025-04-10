@@ -10,8 +10,10 @@ const Book = ({ book }) => {
         </figure>
         <div className="card-body">
           <div className="flex justify-center gap-4 ">
-            {tags.map((tag) => (
-              <button className="btn btn-xs bg-[#22be0a09] text-[#23BE0A]">
+            {tags.map((tag,indx) => (
+              <button 
+              key={indx}
+              className="btn btn-xs bg-[#22be0a09] text-[#23BE0A]">
                 {tag}
               </button>
             ))}
