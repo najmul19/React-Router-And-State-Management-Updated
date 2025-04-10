@@ -5,10 +5,25 @@ import "./index.css";
 
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Root from "./componets/Root/Root";
+import ErrorPage from "./componets/ErrorPage/ErrorPage";
+import Home from "./componets/Home/Home";
+import DashBoard from "./componets/DashBoard/DashBoard";
 const router = createBrowserRouter([
   {
     path: "/",
     element: <Root></Root>,
+    errorElement: <ErrorPage></ErrorPage>,
+    children: [
+      {
+        path: '/',
+        element: <Home></Home>,
+
+      },
+      {
+        path: 'dashboard',
+        element: <DashBoard></DashBoard>
+      }
+    ]
   },
 ]);
 createRoot(document.getElementById("root")).render(
