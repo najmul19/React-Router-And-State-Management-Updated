@@ -6,6 +6,7 @@ import "react-tabs/style/react-tabs.css";
 import { getStoredReadList } from "../../Utility/addTodb";
 import { useState } from "react";
 import Book from "../Book/Book";
+import List from "../List/List";
 
 const ListedBooks = () => {
   const [readlist, setReadList] = useState([]);
@@ -26,14 +27,16 @@ const ListedBooks = () => {
   const handleSort = (sortType) => {
     setSort(sortType);
     // const sortedReadList = [...readlist].sort()
-    if(sortType==='No of pages') {
-        const sortedReadList = [...readlist].sort((a,b)=> a.totalPages - b.totalPages);
-        setReadList(sortedReadList)
+    if (sortType === "No of pages") {
+      const sortedReadList = [...readlist].sort(
+        (a, b) => a.totalPages - b.totalPages
+      );
+      setReadList(sortedReadList);
     }
-    if(sortType==='Rattings') {
-        const sortedReadList =[...readlist].sort((a,b)=>a.rating-b.rating);
+    if (sortType === "Rattings") {
+      const sortedReadList = [...readlist].sort((a, b) => a.rating - b.rating);
 
-        setReadList(sortedReadList)
+      setReadList(sortedReadList);
     }
   };
   return (
@@ -42,16 +45,16 @@ const ListedBooks = () => {
 
       <div className="dropdown">
         <div tabIndex={0} role="button" className="btn m-1">
-          {sort ? `Sort By ${ sort }`  : "Sort By"}
+          {sort ? `Sort By ${sort}` : "Sort By"}
         </div>
         <ul
           tabIndex={0}
           className="dropdown-content menu bg-base-100 rounded-box z-[1] w-52 p-2 shadow"
         >
-          <li onClick={()=>handleSort('Rattings')}>
+          <li onClick={() => handleSort("Rattings")}>
             <a>Rattings</a>
           </li>
-          <li onClick={()=>handleSort('No of pages')}>
+          <li onClick={() => handleSort("No of pages")}>
             <a>No of pages</a>
           </li>
         </ul>
@@ -65,8 +68,12 @@ const ListedBooks = () => {
 
         <TabPanel>
           <h2 className="text-2xl">Books I Read: {readlist.length} </h2>
-          {readlist.map((book) => (
+          {/* {readlist.map((book) => (
             <Book key={book.bookId} book={book}></Book>
+          ))} */}
+
+          {readlist.map((book) => (
+            <List key={book.bookId} book={book}></List>
           ))}
         </TabPanel>
         <TabPanel>

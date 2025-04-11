@@ -115,5 +115,44 @@
     "tags": ["Suspense", "Psychological"],
     "publisher": "Riverhead Books",
     "yearOfPublishing": 2015
+  },
+  {
+    "bookId": 10,
+    "bookName": "The Catcher in the Rye",
+    "author": "Awlad Hossain",
+    "image": "https://i.postimg.cc/6pZrcVGS/forth.png",
+    "review": "'The Catcher in the Rye' follows the journey of a young adult through themes of identity, disillusionment, and the struggle of growing up. With a blend of emotion and rebellion, the story remains a timeless classic.",
+    "totalPages": 192,
+    "rating": 4.5,
+    "category": "Classic",
+    "tags": ["Young Adult", "Identity"],
+    "publisher": "Scribner",
+    "yearOfPublishing": 1924
+  },
+  {
+    "bookId": 11,
+    "bookName": "The Catcher in the Rye",
+    "author": "Awlad Hossain",
+    "image": "https://i.postimg.cc/GtSF7qK0/fist.png",
+    "review": "'The Catcher in the Rye' offers a deep dive into the psyche of youth navigating a confusing adult world. It continues to connect with readers who feel lost or misunderstood.",
+    "totalPages": 192,
+    "rating": 4.5,
+    "category": "Classic",
+    "tags": ["Young Adult", "Identity"],
+    "publisher": "Scribner",
+    "yearOfPublishing": 1924
+  },
+  {
+    "bookId": 12,
+    "bookName": "The Catcher in the Rye",
+    "author": "Awlad Hossain",
+    "image": "https://i.postimg.cc/3rb2HfXV/second.png",
+    "review": "Through the lens of youth and emotional turmoil, 'The Catcher in the Rye' explores identity and isolation in a world of expectations and change. A must-read classic for all generations.",
+    "totalPages": 192,
+    "rating": 4.5,
+    "category": "Classic",
+    "tags": ["Young Adult", "Identity"],
+    "publisher": "Scribner",
+    "yearOfPublishing": 1924
   }
 ]

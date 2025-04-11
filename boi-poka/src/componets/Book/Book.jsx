@@ -18,8 +18,13 @@ const Book = ({ book }) => {
               </button>
             ))}
           </div>
-          <h2 className="card-title">
-            {bookName}
+          <h2 className="card-title ">
+            {
+              <h2 className="whitespace-nowrap overflow-hidden text-ellipsis w-60">
+
+                {bookName}
+              </h2>
+            }
             <div className="badge badge-secondary">NEW</div>
           </h2>
           <p>By: {author}</p>

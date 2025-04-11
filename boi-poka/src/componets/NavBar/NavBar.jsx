@@ -46,8 +46,9 @@ const NavBar = () => {
       <div className="navbar-center hidden lg:flex">
         <ul className="menu menu-horizontal px-1">{links}</ul>
       </div>
-      <div className="navbar-end">
-        <a className="btn">Button</a>
+      <div className="navbar-end gap-2">
+        <a className="btn bg-green-600 shadow-md">Sign In</a>
+        <a className="btn bg-[#59C6D2] shadow-md">Sign Up</a>
       </div>
     </div>
   );
