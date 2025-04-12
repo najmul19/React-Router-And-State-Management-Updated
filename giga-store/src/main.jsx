@@ -37,7 +37,8 @@ const router = createBrowserRouter([
       },
       {
         path: '/allproducts',
-        element: <Allproducts></Allproducts>
+        element: <Allproducts></Allproducts>,
+        loader: ()=> fetch('giga_store.json')
       }
     ]
   }
