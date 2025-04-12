@@ -16,6 +16,7 @@ import Allproducts from './components/Allproducts/Allproducts.jsx'
 import Laptops from './components/Laptops/Laptops.jsx'
 import Phones from './components/Phones/Phones.jsx'
 import Accesories from './components/Accesories/Accesories.jsx'
+import SmartWatches from './components/SmartWatches/SmartWatches.jsx'
 
 const router = createBrowserRouter([
   {
@@ -57,7 +58,13 @@ const router = createBrowserRouter([
         path: '/accessories',
         element: <Accesories></Accesories>,
         loader: ()=>fetch('giga_store.json')
-      }
+      },
+      {
+        path: '/smartwatch',
+        element: <SmartWatches></SmartWatches>,
+        loader: ()=>fetch('giga_store.json')
+      },
+
     ]
   }
   

@@ -17,7 +17,7 @@ const Category = () => {
             <NavLink to='/accessories'>Accessories</NavLink>
         </li>
         <li>
-            <NavLink to='/smartwathces'>Smart wathces</NavLink>
+            <NavLink to='/smartwatch'>Smart wathces</NavLink>
         </li>
         <li>
             <NavLink to='/macbook'>Macbook</NavLink>
