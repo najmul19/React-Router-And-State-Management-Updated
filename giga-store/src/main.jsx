@@ -19,6 +19,7 @@ import Accesories from './components/Accesories/Accesories.jsx'
 import SmartWatches from './components/SmartWatches/SmartWatches.jsx'
 import MackBook from './components/MackBook/MackBook.jsx'
 import Iphones from './components/Iphones/Iphones.jsx'
+import DetailsPage from './components/DetailsPage/DetailsPage.jsx'
 
 const router = createBrowserRouter([
   {
@@ -27,11 +28,14 @@ const router = createBrowserRouter([
     children:  [
       {
         path: '/',
-        element: <Home></Home>
+        element: <Home></Home>,
+        loader: ()=>fetch('giga_store.json')
+
       },
       {
         path: '/home',
-        element: <Home></Home>
+        element: <Home></Home>,
+        loader: ()=>fetch('giga_store.json')
       },
       {
         path: '/statistics',
@@ -75,7 +79,14 @@ const router = createBrowserRouter([
         path: '/iphone',
         element: <Iphones></Iphones>,
         loader: ()=>fetch('giga_store.json')
+      },
+      {
+        path: 'detailspage/:product_id',
+        element: <DetailsPage></DetailsPage>,
+        loader: ()=>fetch('/giga_store.json')
       }
+      
+      
 
     ]
   }

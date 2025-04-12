@@ -7,10 +7,12 @@ const SmartWatches = () => {
     const smartwatch = smartwatchs.filter(smartwatch=> smartwatch.category==='smartwatch' );
 
     return (
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
+        <div className="flex justify-center">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
             {
                 smartwatch.map(smartwatch=> <AllProduct key={smartwatch.product_id} data={smartwatch}></AllProduct> )
             }
+        </div>
         </div>
     );
 };

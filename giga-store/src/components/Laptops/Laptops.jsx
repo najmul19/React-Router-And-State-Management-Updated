@@ -10,11 +10,13 @@ const Laptops = () => {
 
     // console.log(laptop);
     return (
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
+       <div className="flex justify-center">
+         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
             {
                 laptop.map(lap=> <AllProduct key={lap.product_id} data={lap}></AllProduct> )
             }
         </div>
+       </div>
     );
 };
 
