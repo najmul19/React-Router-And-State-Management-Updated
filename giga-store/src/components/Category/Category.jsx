@@ -25,7 +25,7 @@ const Category = () => {
         <li>
             <NavLink to='/iphone'>Iphone</NavLink>
         </li>
-        <p>Iphone</p>
+       
       </ul>
     </div>
   );

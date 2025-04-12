@@ -1,5 +1,5 @@
 const AllProduct = ({ data }) => {
-  console.log(data);
+  // console.log(data);
   const { product_title, product_image, price } = data;
   return (
     <div className="card bg-base-100 w-80 shadow-xl">
@@ -7,7 +7,7 @@ const AllProduct = ({ data }) => {
         <img
           src={product_image}
           alt="product image"
-          className="rounded-xl max-h-[250px] max-w-full w-auto object-contain mx-auto"
+          className="rounded-xl h-[220px] max-w-full w-auto object-contain mx-auto"
         />
       </figure>
       <div className="card-body px-5">

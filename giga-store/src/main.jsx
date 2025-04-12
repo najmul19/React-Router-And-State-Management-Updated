@@ -13,6 +13,8 @@ import path from 'path'
 import Statistics from './components/Statistics/Statistics.jsx'
 import Dashboard from './components/Dashboard/Dashboard.jsx'
 import Allproducts from './components/Allproducts/Allproducts.jsx'
+import Laptops from './components/Laptops/Laptops.jsx'
+import Phones from './components/Phones/Phones.jsx'
 
 const router = createBrowserRouter([
   {
@@ -39,6 +41,16 @@ const router = createBrowserRouter([
         path: '/allproducts',
         element: <Allproducts></Allproducts>,
         loader: ()=> fetch('giga_store.json')
+      },
+      {
+        path: '/laptops',
+        element: <Laptops></Laptops>,
+        loader: ()=>fetch('giga_store.json')
+      },
+      {
+        path: '/phones',
+        element: <Phones></Phones>,
+        loader: ()=>fetch('giga_store.json')
       }
     ]
   }
