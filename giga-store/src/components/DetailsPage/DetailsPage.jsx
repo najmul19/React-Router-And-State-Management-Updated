@@ -17,8 +17,8 @@ const DetailsPage = () => {
         addToWIshList(id);
     }
     return (
-        <div className="flex pl-16">
-            <div className=" h-[400px] bg-purple-700 flex flex-col md:flex-row rounded-2xl  max-w-3xl p-5">
+        <div className="flex justify-center items-center">
+            <div className=" h-[400px] bg-purple-700 flex flex-col md:flex-row rounded-2xl  max-w-3xl p-5 justify-center items-center">
             <div className="w-2/5 flex items-center bg-gray-400 rounded-2xl">
                 <img className="max-h-[350px] rounded-xl" src={product_image} alt="" />
             </div>
@@ -34,8 +34,8 @@ const DetailsPage = () => {
                     }
                 </ol>
                 <p className="pb-1 font-bold text-black">Ratting: {rating}</p>
-                <button onClick={()=> handleAddTocart(product_id)} className="mt-1 btn btn-sm mr-2">Add To Cart</button>
-                <button onClick={()=>{handleAddToWishList(product_id)}} className="mt-1 btn btn-sm">Add To Wish List</button>
+                <button onClick={()=> handleAddTocart(product_id)} className="mt-1 btn btn-sm mr-2 hover:bg-orange-600 hover:text-gray-400 hover:border-gray-700">Add To Cart</button>
+                <button onClick={()=>{handleAddToWishList(product_id)}} className="mt-1 btn btn-sm  hover:bg-rose-600 hover:text-gray-300 hover:border-gray-400">Add To Wish List</button>
             </div>
             
         </div>
