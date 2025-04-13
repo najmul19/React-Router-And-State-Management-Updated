@@ -31,14 +31,21 @@ const WishLiast = () => {
           level. From smart devices to the coolest accessories, we have it all!
         </p>
         <div className="flex flex-col md:flex-row gap-3 pt-3 ">
-          <button onClick={handleCartBtn}  className="btn shadow-md btn-sm bg-white text-purple-700 rounded-3xl w-20">
+          <button onClick={handleCartBtn}  className="btn shadow-md btn-sm bg-white text-purple-700 rounded-3xl w-20  hover:bg-gray-900 hover:text-gray-300">
             Cart
           </button>
-          <button className="btn shadow-md btn-outline btn-sm  text-white rounded-3xl w-20">
+          <button className="btn shadow-md btn-outline btn-sm  text-white rounded-3xl w-20  hover:bg-gray-900 hover:text-gray-300">
             WishList
           </button>
         </div>
       </div>
+
+      <div className=" py-5 flex flex-col md:flex-row justify-between">
+        <div className=" flex items-center">
+          <h2 className="text-2xl font-bold">Wishlist</h2>
+        </div>
+      </div>
+
       {wishList.map((cart) => (
         <Cart data={cart} key={cart.product_id}></Cart>
       ))}

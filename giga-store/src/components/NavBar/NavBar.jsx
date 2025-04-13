@@ -4,9 +4,9 @@ import { getAddToCart } from "../../Utils/addToLocalDb";
 const NavBar = () => {
   const cartCount = getAddToCart();
   // console.log(cartCount)
-  const handleCartBtn = () => {
-    naviagte("/dashboard/cart");
-  };
+  // const handleCartBtn = () => {
+  //   naviagte("/dashboard/cart");
+  // };
   return (
     <div className="navbar bg-base-100">
       <div className="navbar-start">

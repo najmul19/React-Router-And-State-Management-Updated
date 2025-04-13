@@ -10,6 +10,7 @@ const Root = () => {
   const location = useLocation();
   const path = location.pathname;
   const showHeroRoutes = [
+    "/",
     "/allproducts",
     "/laptops",
     "/phones",
