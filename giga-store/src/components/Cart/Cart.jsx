@@ -3,6 +3,7 @@ import React from 'react';
 const Cart = ({data}) => {
     
     const {description,price,product_image,product_title,brand,Specification,category,rating} = data;
+
     return (
         <div className="md:flex gap-5 md:gap-12 lg:gap-5 mb-2 p-5 border rounded-2xl border-gray-600">
         <div className="md:w-1/5 bg-[#13131329] rounded-2xl flex justify-center items-center">
@@ -14,8 +15,8 @@ const Cart = ({data}) => {
           <p className="pt text-gray-300">Brand: {brand} </p>
           <div className="space-y-3 md:space-y-0 py-1 mr-2 md:flex gap-2">
             <span className="font-bold">Specification: </span>
-            {Specification.map((specification) => (
-              <p className="px-3 py-1 rounded-2xl text-[#23BE0A] bg-[#22be0a0e]">
+            {Specification.map((specification,indx) => (
+              <p key={indx} className="px-3 py-1 rounded-2xl text-[#23BE0A] bg-[#22be0a0e]">
                 {specification}
               </p>
             ))}
@@ -32,8 +33,6 @@ const Cart = ({data}) => {
               <p className="rounded-2xl px-3 font-bold bg-orange-100 text-orange-500">Rating: {rating}</p>
               <button className="rounded-2xl px-3 font-bold bg-green-600">View Ditals</button>
           </div>
-            
-         
         </div>
       </div>
     );
