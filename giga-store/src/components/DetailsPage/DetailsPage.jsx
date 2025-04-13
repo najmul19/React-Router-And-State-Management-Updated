@@ -11,7 +11,7 @@ const DetailsPage = () => {
     console.log(data,product,product_id)
     return (
         <div className="flex pl-16">
-            <div className=" h-[400px] bg-purple-600 flex flex-col md:flex-row rounded-2xl  max-w-3xl p-5">
+            <div className=" h-[400px] bg-purple-700 flex flex-col md:flex-row rounded-2xl  max-w-3xl p-5">
             <div className="w-2/5 flex items-center bg-gray-400 rounded-2xl">
                 <img className="max-h-[350px] rounded-xl" src={product_image} alt="" />
             </div>
