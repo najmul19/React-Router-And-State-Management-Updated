@@ -22,12 +22,12 @@ const getWishList=()=>{
 const addAddToCart=(id)=>{
     const cartPars = getAddToCart();
     if(cartPars.includes(id)) {
-        console.log('already exist')
+        console.log('already exist in the cart')
     } else {
         cartPars.push(id);
         const cartString = JSON.stringify(cartPars);
         localStorage.setItem('cart',cartString);
-        toast('added to cart');
+        toast('This item added to your cart list');
     }
 }
 const addToWIshList =(id)=>{
@@ -38,7 +38,7 @@ const addToWIshList =(id)=>{
         wishlistInt.push(id);
         const wishlistString=JSON.stringify(wishlistInt);
         localStorage.setItem('wishlist',wishlistString);
-        toast('item added in wishlist');
+        toast('This item added to your wishlist');
     }
 }
 
