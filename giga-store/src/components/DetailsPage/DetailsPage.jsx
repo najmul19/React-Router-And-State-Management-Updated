@@ -1,4 +1,5 @@
 import { useLoaderData, useParams } from "react-router-dom";
+import { addAddToCart, addToWIshList } from "../../Utils/addToLocalDb";
 
 
 const DetailsPage = () => {
@@ -8,7 +9,13 @@ const DetailsPage = () => {
 
     const product = data.find((product) => product.product_id === product_id);
     const {product_title,product_image,category,price,rating,reviews_count,warranty,brand,availability,Specification,description} = product;
-    console.log(data,product,product_id)
+    // console.log(data,product,product_id)
+    const handleAddTocart=(id)=>{
+        addAddToCart(id);
+    }
+    const handleAddToWishList=(id)=>{
+        addToWIshList(id);
+    }
     return (
         <div className="flex pl-16">
             <div className=" h-[400px] bg-purple-700 flex flex-col md:flex-row rounded-2xl  max-w-3xl p-5">
@@ -23,12 +30,12 @@ const DetailsPage = () => {
                 <h2 className="text-black pb-1 font-bold">Specification:</h2>
                 <ol className="text-gray-300 pb-1">
                     {
-                        Specification.map((sp,indx)=> <li> {indx+1}. {sp}</li> )
+                        Specification.map((sp,indx)=>  <li>  {indx+1}. {sp}</li> )
                     }
                 </ol>
                 <p className="pb-1 font-bold text-black">Ratting: {rating}</p>
-                <button className="mt-1 btn btn-sm mr-2">Add To Cart</button>
-                <button className="mt-1 btn btn-sm">Add To Wish List</button>
+                <button onClick={()=> handleAddTocart(product_id)} className="mt-1 btn btn-sm mr-2">Add To Cart</button>
+                <button onClick={()=>{handleAddToWishList(product_id)}} className="mt-1 btn btn-sm">Add To Wish List</button>
             </div>
             
         </div>
