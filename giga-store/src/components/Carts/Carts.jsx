@@ -55,7 +55,7 @@ const Carts = () => {
     <div className="">
       {showDialog && (
         <div className="fixed inset-0 bg-gray-900 bg-opacity-70 flex items-center justify-center">
-          <div className="bg-white p-5 rounded-xl shadow-xl flex flex-col justify-center text-center items-center w-1/5 h-1/3">
+          <div className="bg-white p-5 rounded-xl shadow-xl flex flex-col justify-center text-center items-center w-auto md:w-60 h-auto">
             <img className="w-10 pb-3" src={successImg} alt="" />
             <h2 className="text-xl pb-3 font-bold text-purple-800">
               Payment Successfully
