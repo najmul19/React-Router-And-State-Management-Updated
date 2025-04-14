@@ -24,7 +24,7 @@ const WishLiast = () => {
     }
     return (
         <div className="">
-      <div className="bg-purple-800 h-48 rounded-sm flex flex-col justify-center items-center space-y-2 text-center">
+      <div className="bg-purple-800 h-auto md:h-48 rounded-sm flex flex-col justify-center items-center space-y-2 text-center">
         <h2 className="text-2xl font-bold">Dashboard: {wishList.length}</h2>
         <p className="text-gray-300 max-w-2xl">
           Explore the latest gadgets that will take your experience to the next

@@ -71,7 +71,7 @@ const Carts = () => {
           </div>
         </div>
       )}
-      <div className="bg-purple-800 h-48 rounded-sm flex flex-col justify-center items-center space-y-2 text-center">
+      <div className="bg-purple-800 h-auto md:h-48 rounded-sm flex flex-col justify-center items-center space-y-2 text-center">
         <h2 className="text-2xl font-bold">Dashboard: {carList.length}</h2>
         <p className="text-gray-300 max-w-2xl">
           Explore the latest gadgets that will take your experience to the next
@@ -89,12 +89,12 @@ const Carts = () => {
           </button>
         </div>
       </div>
-      <div className=" py-5 flex flex-col md:flex-row justify-between">
-        <div className=" flex items-center">
+      <div className=" py-5 flex flex-col md:flex-row justify-between ">
+        <div className=" flex items-center justify-center md:justify-start">
           <h2 className="text-2xl font-bold">Cart</h2>
         </div>
-        <div className="flex justify-end items-center gap-5">
-          <h2 className="font-bold">Total Cost: ${prc.toFixed(3)}</h2>
+        <div className="flex flex-col md:flex-row justify-center md:justify-end items-center gap-5">
+          <h2 className="font-bold mt-2 md:mt-0">Total Cost: ${prc.toFixed(3)}</h2>
           <button className=" w-24 btn btn-sm btn-outline text-purple-700 outline-purple-800 font-bold  hover:bg-gray-900 hover:text-gray-300">
             Sort
           </button>

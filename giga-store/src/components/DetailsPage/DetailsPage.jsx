@@ -18,14 +18,14 @@ const DetailsPage = () => {
     }
     return (
         <div className="flex justify-center items-center">
-            <div className=" h-[400px] bg-purple-700 flex flex-col md:flex-row rounded-2xl  max-w-3xl p-5 justify-center items-center">
-            <div className="w-2/5 flex items-center bg-gray-400 rounded-2xl">
+            <div className=" h-auto md:h-[400px] bg-purple-700 flex flex-col md:flex-row rounded-2xl  max-w-3xl p-5 justify-center items-center">
+            <div className="md:w-2/5 flex items-center bg-gray-400 rounded-2xl">
                 <img className="max-h-[350px] rounded-xl" src={product_image} alt="" />
             </div>
-            <div className="w-3/5 pl-5">
+            <div className="md:w-3/5 md:pl-5 items-center text-center md:text-start justify-center">
                 <h2 className="text-2xl font-bold text-black pb-1">{product_title}</h2>
                 <p className="text-gray-300  pb-1 font-bold">Price: ${price}</p>
-                <p className="px-3 bg-green-100  pb-1 rounded-3xl text-green-600 font-bold border border-green-600 max-w-[80px] text-center">{availability?'inStock':'not avilable'}</p>
+                <p className={`px-3 bg-green-100  pb-1 rounded-3xl text-green-600 font-bold border border-green-600 text-center   ${availability? 'md:max-w-[80px]' : 'md:max-w-[130px]'} `}>{availability?'inStock' :'not avilable'  }</p>
                 <p className="text-gray-300 pb-1">{description}</p>
                 <h2 className="text-black pb-1 font-bold">Specification:</h2>
                 <ol className="text-gray-300 pb-1">
